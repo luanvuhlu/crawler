@@ -12,8 +12,16 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Crawler {
 
+    private static final List<String> EXCLUDE_FILES = List.of(
+        Paths.get("crawler-configs", "sample.yaml").toString(),
+        Paths.get("crawler-configs", "sample.yml").toString()
+    );
+
     public static void run() throws Exception {
-        List<Path> configFiles = listConfigFiles();
+        List<Path> configFiles = listConfigFiles()
+            .stream()
+            .filter(p -> EXCLUDE_FILES.stream().noneMatch(name -> p.toString().endsWith(name)))
+            .toList();
         if (configFiles.isEmpty()) {
             log.error("No config files found in crawler-configs");
             return;

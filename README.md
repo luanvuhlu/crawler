@@ -8,7 +8,7 @@ Java Playwright crawler skeleton with login, session management, rate limiting (
 - Browsers installed by Playwright (first run downloads automatically)
 
 ## Configure
-Edit `src/main/resources/crawler-config.yaml`.
+Create new configuration file in `src/main/resources/crawler-configs`.
 Set credentials via environment variables named in config (e.g., `CRAWLER_USERNAME`, `CRAWLER_PASSWORD`).
 
 ## Run

@@ -7,8 +7,8 @@ login:
   usernameSelector: "#username"
   passwordSelector: "#password"
   submitSelector: "button.btn.btn-default.btn-block"
-  usernameEnv: "EXAMPLE_USERNAME"
-  passwordEnv: "EXAMPLE_PASSWORD"
+  usernameEnv: "CRAWLER_USERNAME"
+  passwordEnv: "CRAWLER_PASSWORD"
   loggedInCheckSelector: ".dropdown.userinfo"
   timeoutMs: 20000
 rateLimit:
@@ -29,7 +29,7 @@ crawlers:
     url: "index.php?com=product&act=man&type=san-pham"
     rootSelector: "#dyntable_wrapper"
     properties:
-      startPage: 23
+      startPage: 1
       itemSelectors: "tbody tr"
       detailLinkSelector: "td:nth-child(5) a"
       crawlId: "productDetail"
