@@ -97,7 +97,7 @@ public class Crawler {
 
     private static void runWithConfig(Config config) throws Exception {
         try (BrowserSession session = new BrowserSession(config);
-            ExecutorService executor = java.util.concurrent.Executors.newFixedThreadPool(20);
+            ExecutorService executor = java.util.concurrent.Executors.newFixedThreadPool(20)
         ) {
             session.start();
             Page page = session.getPage();

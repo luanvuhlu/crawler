@@ -14,7 +14,7 @@ Set credentials via environment variables named in config (e.g., `CRAWLER_USERNA
 ## Run
 ```
 mvn -q -DskipTests package
-java -jar target/gachmengiatot-crawler-0.1.0-SNAPSHOT.jar
+java -jar target/crawler-0.1.0-SNAPSHOT.jar
 ```
 
 Or run tests:
